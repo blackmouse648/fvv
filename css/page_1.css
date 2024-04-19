@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+* {
+    font-size: 14px;
+}
+#page_1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: black 1px solid;
+    justify-content: center;
+    background-image: linear-gradient(to top, #f5e2bd, #f6daa8, #f7d293, #f8ca7e, #fac169);
+}
+#todo_root{
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #ffffff3f;
+    backdrop-filter: blur(10px);
+
+}
+#todo_app{
+
+    width: 100%;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: #ffffff3f;
+    backdrop-filter: blur(10px);
+    border: #fac169;
+    border-radius: 10px;
+}
+.font_main_header {
+    font-weight: 10px;
+    font-size: xx-large;
+    color: #c5a77988;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.header_input{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 3;
+    display: inline-block;
+    border-radius: 1px 1px 10px 10px;
+    border: rgb(189, 175, 151) 1px solid;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+    color: rgba(106, 104, 104, 0.719);
+    box-shadow: 2px 2px 3px rgb(164, 143, 107);
+}
+input::placeholder {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+    color: rgba(106, 104, 104, 0.267);
+}
