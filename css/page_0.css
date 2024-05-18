@@ -1,0 +1,105 @@
+#page_0 {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+#remind {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#remind_header {
+     height: 10%;
+}
+#remind_main {
+    height: 100%;
+}
+.remind_main_padding{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.remind_content_background {
+    display: flex;
+    flex-direction: column;
+}
+.remind_0{
+    height: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+}
+.remind_content_0{
+    height: 100%;
+}
+.remind_1{
+    height: 60%;
+    width: 100%;
+    padding-left: 9%;
+    padding-right: 1%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+}
+.remind_content_1{
+    height: 100%;
+}
+.remind_2{
+    height: 40%;
+    padding-left: 2%;
+    padding-right: 9%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+}
+.remind_content_2{
+    height: 100%;
+}
+.remind_3{
+    height: 60%;
+    padding-left: 2%;
+    padding-right: 9%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+}
+.remind_content_3{
+    height: 100%;
+}
+.remind_4{
+    flex-direction: row;
+    height: 60%;
+}
+.remind_5{
+    width: 50%;
+}
+.remind_6{
+    width: 50%;
+}
+.remind_7{
+    height: 40%;
+    width: 100%;
+    padding-left: 9%;
+    padding-right: 1%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+}
+.remind_content_7{
+    height: 100%;
+}
+#page0_footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10%;
+    background-color: rgba(160, 155, 145, 0.979);
+    border: rgb(250, 223, 164) 1px solid;
+    border-radius: 5px 5px 0 0;
+}
