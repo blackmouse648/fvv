@@ -1,7 +1,7 @@
 #page_0 {
     height: 100%;
     width: 100%;
-    background-color: brown;
+    background-image: linear-gradient(to top, #cbc7c7, #bbb8b9, #acaaab, #9c9c9d, #8e8e8e);
     display: flex;
     flex-direction: column;
 }
@@ -12,7 +12,15 @@
     flex-direction: column;
 }
 #remind_header {
-     height: 10%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 10%;
+    background: #c5c3c3;
+}
+.remind_header_content{
+    height: 80%;
+    width: 92.5%;
 }
 #remind_main {
     height: 100%;
@@ -28,19 +36,20 @@
 }
 .remind_0{
     height: 40%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-bottom: 5px;
     padding-top: 5px;
     display: flex;
 }
 .remind_content_0{
+    border-radius: 1rem;    
     height: 100%;
 }
 .remind_1{
     height: 60%;
     width: 100%;
-    padding-left: 9%;
+    padding-left: 4%;
     padding-right: 1%;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -48,28 +57,31 @@
 }
 .remind_content_1{
     height: 100%;
+    border-radius: 1rem;
 }
 .remind_2{
     height: 40%;
     padding-left: 2%;
-    padding-right: 9%;
+    padding-right: 4%;
     padding-bottom: 5px;
     padding-top: 5px;
     display: flex;
 }
 .remind_content_2{
     height: 100%;
+    border-radius: 1rem;
 }
 .remind_3{
     height: 60%;
     padding-left: 2%;
-    padding-right: 9%;
+    padding-right: 4%;
     padding-bottom: 5px;
     padding-top: 5px;
     display: flex;
 }
 .remind_content_3{
     height: 100%;
+    border-radius: 1rem;
 }
 .remind_4{
     flex-direction: row;
@@ -84,7 +96,7 @@
 .remind_7{
     height: 40%;
     width: 100%;
-    padding-left: 9%;
+    padding-left: 4%;
     padding-right: 1%;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -92,6 +104,7 @@
 }
 .remind_content_7{
     height: 100%;
+    border-radius: 1rem;
 }
 #page0_footer {
     width: 100%;
@@ -99,7 +112,15 @@
     align-items: center;
     justify-content: space-around;
     height: 10%;
-    background-color: rgba(160, 155, 145, 0.979);
+    background-color:#eceaea;
     border: rgb(250, 223, 164) 1px solid;
     border-radius: 5px 5px 0 0;
+}
+.page_bu{
+    cursor: pointer;
+    border-color: #8e8e8efc;
+    border-radius: 1rem;
+    &:active{
+        background-color: #eceaea;
+    }
 }

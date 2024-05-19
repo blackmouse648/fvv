@@ -11,7 +11,7 @@
     border: black 1px solid;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(to top, #f5e2bd, #f6daa8, #f7d293, #f8ca7e, #fac169);
+    background-image: linear-gradient(to top, #cbc7c7, #bbb8b9, #acaaab, #9c9c9d, #8e8e8e);
 }
 #todo_root{
     height: 100%;
@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: space-around;
     height: 10%;
-    background-color: rgba(160, 155, 145, 0.979);
+    background-color: #eceaea;
     border: rgb(250, 223, 164) 1px solid;
     border-radius: 5px 5px 0 0;
 }
