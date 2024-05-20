@@ -42,9 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 10%;
+    height: 8%;
     background-color: #eceaea;
-    border: rgb(250, 223, 164) 1px solid;
+    box-shadow:0px 0px 5px rgba(40, 38, 38, 0.614);
     border-radius: 5px 5px 0 0;
 }
 .font_main_header {
@@ -79,5 +79,5 @@ input::placeholder {
 }
 
 .border_box{
-    border: 2px black solid;
+    border: 1px black solid;
 }

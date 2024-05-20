@@ -1,7 +1,20 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
 #page_0 {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to top, #cbc7c7, #bbb8b9, #acaaab, #9c9c9d, #8e8e8e);
+    
+    background-image: 
+    radial-gradient(circle, #353435, #484749, #5c5b5e, #717073, #86868a, #96979a, #a7a8ab,
+     #b8b9bc, #c8c9cb, #d8d8da, #e9e9e9, #f9f9f9);
+
     display: flex;
     flex-direction: column;
 }
@@ -16,7 +29,10 @@
     justify-content: center;
     display: flex;
     height: 10%;
-    background: #c5c3c3;
+    background: #eceaea;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow:2px 2px 2px rgba(40, 38, 38, 0.37);
+    margin-bottom: 2%;
 }
 .remind_header_content{
     height: 80%;
@@ -24,6 +40,7 @@
 }
 #remind_main {
     height: 100%;
+    width: 100%;
 }
 .remind_main_padding{
     height: 100%;
@@ -42,14 +59,49 @@
     padding-top: 5px;
     display: flex;
 }
-.remind_content_0{
-    border-radius: 1rem;    
+.remind_content_card{
     height: 100%;
+    width: 100%;
+    box-shadow:2px 2px 2px rgba(40, 38, 38, 0.5);
+    background-color: #fbfbfb42;
+    backdrop-filter: blur(10px);
+    border-color: #0404046c;
+    padding: 2px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.remind_content_0{
+    border-radius: 1rem;  
+    height: 100%;
+    & h2{
+        margin: 0px;
+        top: -10%;
+        right: 1rem;
+        position: absolute;
+        align-self: flex-start;
+        font-size: 10rem;
+        color: rgba(138, 135, 135, 0.167);
+    }
+    & h3{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content:center;
+        height: 70%;
+        width: 70%;
+        margin: 0px;
+        font-size: 1.8em;
+        color: #fff;
+        z-index: 1;
+    }
 }
 .remind_1{
     height: 60%;
     width: 100%;
-    padding-left: 4%;
+    padding-left: 5.5%;
     padding-right: 1%;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -58,11 +110,32 @@
 .remind_content_1{
     height: 100%;
     border-radius: 1rem;
+    & h2{
+        margin: 0px;
+        position:absolute;
+        align-self: flex-start;
+        top: -10%;
+        right: 1rem;
+        font-size: 8rem;
+        color: rgba(187, 187, 187, 0.084);
+    }
+    & h3{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content:center;
+        height: 70%;
+        width: 70%;
+        margin: 0px;
+        font-size: 1.8em;
+        color: #fff;
+        z-index: 1;
+    }
 }
 .remind_2{
     height: 40%;
     padding-left: 2%;
-    padding-right: 4%;
+    padding-right: 5.5%;
     padding-bottom: 5px;
     padding-top: 5px;
     display: flex;
@@ -70,11 +143,32 @@
 .remind_content_2{
     height: 100%;
     border-radius: 1rem;
+    & h2{
+        margin: 0px;
+        position:absolute;
+        align-self: flex-start;
+        top: -10%;
+        right: 1rem;
+        font-size: 6rem;
+        color: rgba(138, 135, 135, 0.137);
+    }
+    & h3{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content:center;
+        height: 70%;
+        width: 70%;
+        margin: 0px;
+        font-size: 1.8em;
+        color: #fff;
+        z-index: 1;
+    }
 }
 .remind_3{
     height: 60%;
     padding-left: 2%;
-    padding-right: 4%;
+    padding-right: 5.5%;
     padding-bottom: 5px;
     padding-top: 5px;
     display: flex;
@@ -82,6 +176,27 @@
 .remind_content_3{
     height: 100%;
     border-radius: 1rem;
+    & h2{
+        margin: 0px;
+        position:absolute;
+        align-self: flex-start;
+        top: -10%;
+        right: 1rem;
+        font-size: 8rem;
+        color: rgba(138, 135, 135, 0.167);
+    }
+    & h3{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content:center;
+        height: 70%;
+        width: 70%;
+        margin: 0px;
+        font-size: 1.8em;
+        color: #fff;
+        z-index: 1;
+    }
 }
 .remind_4{
     flex-direction: row;
@@ -96,7 +211,7 @@
 .remind_7{
     height: 40%;
     width: 100%;
-    padding-left: 4%;
+    padding-left: 5.5%;
     padding-right: 1%;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -105,15 +220,30 @@
 .remind_content_7{
     height: 100%;
     border-radius: 1rem;
+    & h2{
+        margin: 0px;
+        position:absolute;
+        align-self: flex-start;
+        top: -10%;
+        right: 1rem;
+        font-size: 6rem;
+        color: rgba(138, 135, 135, 0.13);
+    }
+    & h3{
+        font-size: 1.8em;
+        color: #fff;
+        z-index: 1;
+    }
 }
 #page0_footer {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 10%;
+    margin-top:2%;
+    height: 8%;
     background-color:#eceaea;
-    border: rgb(250, 223, 164) 1px solid;
+    box-shadow:0px 0px 5px rgba(40, 38, 38, 0.614);
     border-radius: 5px 5px 0 0;
 }
 .page_bu{
@@ -124,3 +254,15 @@
         background-color: #eceaea;
     }
 }
+
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    /* transform: translateY(100px); */
+    /* opacity: 0; */
+    /* transition: 0.5s; */
+}
+/* .container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+} */

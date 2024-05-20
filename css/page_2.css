@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     border: black 1px solid;
-    background-image: linear-gradient(to top, #cbc7c7, #c7c3c3, #c2bfbf, #bebcbc, #bab8b8);
+    background-image: linear-gradient(to top, #fefefe, #c4c2c2, #c2bfbf, #bebcbc, #bab8b8);
 }
 #setting {
     height: 100%;
@@ -20,7 +20,9 @@
 }
 #header_page_2{
     height: 20%;
-    background-image: linear-gradient(to top, #bab8b8, #afadae, #a4a3a3, #999899, #8e8e8e);;
+    /* background-image: linear-gradient(to top, #bab8b8, #afadae, #a4a3a3, #999899, #8e8e8e);;
+     */
+    background-color: #eceaea;
     padding-bottom: 10%;
 }
 #main_page_2{
@@ -39,9 +41,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 10%;
+    height: 8%;
     background-color: #eceaea;
-    border: rgb(250, 223, 164) 1px solid;
+    box-shadow:0px 0px 5px rgba(40, 38, 38, 0.614);
     border-radius: 5px 5px 0 0;
 }
 .page_2_padding {
@@ -61,8 +63,8 @@
 
 }
 .portrait_box{
-    height: 40px;
-    width: 40px;
+    height: 3rem;
+    width: 3rem;
 }
 .setting_button{
     display: flex;
@@ -71,12 +73,15 @@
     margin-bottom: 10px;
     height: 8%;
     border-radius: 0.5rem;
-    border-color: #989696;
+    background-color: #bebdbd;
+    border-color: #bebdbd;
     cursor: pointer;
     &:active{
         background-color:#eceaea;
     }
 }
 .setting_button_back{
-
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
 }
