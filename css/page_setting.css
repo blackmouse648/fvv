@@ -1,10 +1,16 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 * {
     box-sizing: border-box;
-}
-* {
     font-size: 14px;
 }
+#fvvmain_page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 #page_2 {
+    max-width: 500px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -84,4 +90,26 @@
     width: 100%;
     display: flex;
     justify-content:space-between;
+}
+.border_box{
+    border: 1px black solid;
+}
+#page0_footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top:2%;
+    height: 8%;
+    background-color:#eceaea;
+    box-shadow:0px 0px 5px rgba(40, 38, 38, 0.614);
+    border-radius: 5px 5px 0 0;
+}
+.page_bu{
+    cursor: pointer;
+    border-color: #8e8e8efc;
+    border-radius: 1rem;
+    &:active{
+        background-color: #eceaea;
+    }
 }

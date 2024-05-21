@@ -1,0 +1,179 @@
+
+@import url('http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+#fvvmain_page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#page_1 {
+    max-width: 500px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: black 1px solid;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #cbc7c7, #bbb8b9, #acaaab, #9c9c9d, #8e8e8e);
+}
+#todo_root{
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #ffffff3f;
+    backdrop-filter: blur(10px);
+
+}
+#todo_app{
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: #ffffff3f;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+#footer_page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8%;
+    background-color: #eceaea;
+    box-shadow:0px 0px 5px rgba(11, 10, 10, 0.781);
+    border-radius: 5px 5px 0 0;
+}
+.font_main_header {
+    font-weight: 10px;
+    font-size: 3rem;
+    color: #923131e0;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.header_input{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 3.5;
+    display: flex;
+    border: #77767447 1px solid;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+    color: rgba(106, 104, 104, 0.719);
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.08);
+}
+input::placeholder {
+    padding-left: 10%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+    color: rgba(106, 104, 104, 0.267);
+}
+#main{
+    height: 80%;
+    width: 100%;
+}
+.todo_list{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    & li{
+        height: 9.7%;
+        width: 100%;
+        background-color: #fffefe;
+        &:hover .destory{
+            display: block;
+        }
+    }
+}
+.view{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    & label{
+        width: 75%;
+        padding-left: 20px;
+        word-break: break-all;
+        line-height: 1.2;
+        transition: color 0.4s;
+        font-weight: 520;
+        font-size: 1.5rem;
+        color: #484848;
+    }
+}
+.todo_list li .view .toggle{
+    width: 40px;
+    height: 100%;
+    appearance: none;
+    background-position:center left;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23949494%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+    &:checked{
+        ~ label{
+            color: #949494;
+            text-decoration: line-through;
+        }
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%2359A193%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20fill%3D%22%233EA390%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22%2F%3E%3C%2Fsvg%3E');
+    }
+}
+.todo_list li .destory{
+    display: none;
+    background: none;
+    border: none;
+    left: 90%;
+    height: 30px;
+    width: 30px;
+	font-size: 30px;
+	color: #949494;
+	transition: color 0.2s ease-out;
+    &:focus, &:hover{
+        color: #923131e0;
+    }
+    &::after{
+        content: '×';
+        display: block;
+        height: 100%;
+        line-height: 1.1;
+    }
+}
+#page0_footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top:2%;
+    height: 8%;
+    background-color:#eceaea;
+    box-shadow:0px 0px 5px rgba(40, 38, 38, 0.614);
+    border-radius: 5px 5px 0 0;
+}
+.page_bu{
+    cursor: pointer;
+    border-color: #8e8e8efc;
+    border-radius: 1rem;
+    &:active{
+        background-color: #eceaea;
+    }
+}
+.border_box{
+    border: 1px black solid;
+}

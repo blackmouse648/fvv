@@ -5,8 +5,19 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
+    font-size: 14px;
 }
-
+#fvvmain_page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#root {
+    max-width: 500px;
+    height: 100%;
+    width: 100%;
+}
 #page_0 {
     height: 100%;
     width: 100%;
@@ -83,7 +94,7 @@
         position: absolute;
         align-self: flex-start;
         font-size: 10rem;
-        color: rgba(138, 135, 135, 0.167);
+        color: rgba(138, 135, 135, 0.199);
     }
     & h3{
         display: flex;
@@ -117,7 +128,7 @@
         top: -10%;
         right: 1rem;
         font-size: 8rem;
-        color: rgba(187, 187, 187, 0.084);
+        color: rgba(187, 187, 187, 0.121);
     }
     & h3{
         display: flex;
@@ -150,7 +161,7 @@
         top: -10%;
         right: 1rem;
         font-size: 6rem;
-        color: rgba(138, 135, 135, 0.137);
+        color: rgba(138, 135, 135, 0.219);
     }
     & h3{
         display: flex;
@@ -183,7 +194,7 @@
         top: -10%;
         right: 1rem;
         font-size: 8rem;
-        color: rgba(138, 135, 135, 0.167);
+        color: rgba(138, 135, 135, 0.244);
     }
     & h3{
         display: flex;
@@ -227,7 +238,7 @@
         top: -10%;
         right: 1rem;
         font-size: 6rem;
-        color: rgba(138, 135, 135, 0.13);
+        color: rgba(138, 135, 135, 0.185);
     }
     & h3{
         font-size: 1.8em;
@@ -266,3 +277,7 @@
     transform: translateY(0px);
     opacity: 1;
 } */
+
+.border_box{
+    border: 1px black solid;
+}
