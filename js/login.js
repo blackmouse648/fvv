@@ -58,8 +58,4 @@ const toastiFy = document.querySelector(".toastiFy");
 
         loginButton[0].addEventListener("click", checkLoginFromClick);
 
-        function resetfontsize(){
-            document.documentElement.style.fontSize = screen.width/10 + 'px';
-        }
-        resetfontsize();
-        window.onresize = resetfontsize();
+

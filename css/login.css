@@ -15,9 +15,11 @@
 }
 #root {
     max-width: 500px;
-    background: #22DEEE;
-    background-image: linear-gradient(to right top, #22deee, #52dbff, #96d3ff, #d1c9ff, #fcc0fa);
-    display: flex;
+    /* background: #22DEEE; */
+    background-image: 
+    radial-gradient(circle, #353435, #484749, #5c5b5e, #717073, #86868a, #96979a, #a7a8ab,
+     #b8b9bc, #c8c9cb, #d8d8da, #e9e9e9, #f9f9f9);
+
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -77,10 +79,10 @@
 .font_style_header1 {
     display: block;
     text-align: center;
-    font-size: 24px;
+    font-size: 3rem;
     font-weight: 600; 
     margin-bottom: 5px;
-    color: rgb(78, 78, 77);
+    color: #ae3434e0;
 }
 
 .js-account-error {

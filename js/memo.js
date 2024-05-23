@@ -20,10 +20,10 @@ function update(model, action, data){
             })
             return new_model
         case 'DELETE':
-            // for(i = 0;i<model.todos.length;i++){
-            //     if(model.todos[i].id === Delete_id)
-            //         model.todos.
-            // }
+            new_model.todos = model.todos.filter(function(item){
+                return item.id != data
+            })
+            return new_model
         case 'TOGGLE':
             new_model.todos.forEach(function(item){
                 if(item.id.toString() === data){
@@ -47,8 +47,14 @@ function renderItem(node){
     div.className = "view"
     input.type = "checkbox"
     input.className = "toggle"
+    input.addEventListener("click", function(){
+        toggle_down(this)
+    })
     label.textContent = node.name
     button.className = "destory"
+    button.addEventListener("click",function(){
+        Delete(this)
+    })
     div.appendChild(input)
     div.appendChild(label)
     div.appendChild(button)
@@ -63,36 +69,17 @@ function renderFooter(){
     let button = document.createElement("button")
     let strong = document.createElement("strong")
     let footer = document.createElement("footer")
-    // a.href = '#/'
-    // a.className = 'selected'
-    // a.textContent = 'All'
-    // li.appendChild(a)
-    // ul.className = 'filters'
-    // ul.appendChild(li)
-
-    // a.href = '#/active'
-    // a.className = ''
-    // a.textContent = 'Active'
-    // li.appendChild(a)
-    // ul.appendChild(li)
-    
-    // a.href = '#/completed'
-    // a.className = ''
-    // a.textContent = "Completed"
-    // li.appendChild(a)
-    // ul.appendChild(li)
 
     span.className = "todo-count"
     span.textContent = 'items left'
     span.insertAdjacentHTML("afterbegin", '<strong>2</strong>')
 
-    // footer.appendChild(span)
-    // footer.appendChild(ul)
-
     button.className = "clear-completed"
     button.textContent = "Clear"
+    button.addEventListener("click", clearAllCompleted)
 
     // footer.appendChild(button)
+    ul.className = "filters"
     ul.insertAdjacentHTML("beforeend", 
     '<li><a href="#/" class="selected">All</a></li>\n \
     <li><a href="#/active">Active</a></li>\n \
@@ -100,6 +87,7 @@ function renderFooter(){
     footer.appendChild(span)
     footer.appendChild(ul)
     footer.appendChild(button)
+    footer.className = "footer"
     return footer
 }
 function add(event){
@@ -107,15 +95,10 @@ function add(event){
         model = update(model, "ADD", headerInput.value)
         headerInput.value = ""
         toDoList.appendChild(renderItem(model.todos[model.todos.length-1]))
-        let toggle_array =  document.querySelectorAll(".toggle")
-        toggle.push(toggle_array[toggle_array.length-1])
-        toggle[toggle.length-1].addEventListener("click", function(){
-            toggle_down(this)
-        })
-        const node = renderFooter()
-        if(footerRenderTimes === 0){
-            toDoApp.appendChild(node)
-            footerRenderTimes = 1
+
+        if(footerRenderTime != 1){
+            toDoApp.appendChild(renderFooter())
+            footerRenderTime = 1
         }
     }
 }
@@ -128,9 +111,47 @@ function toggle_down(element){
     console.log(parentnode.id)
     model = update(model, 'TOGGLE', parentnode.id.toString())
 }
-let toggle = []
-let footerRenderTimes = 0
+function clearAllCompleted(){
+    let liArray = document.querySelectorAll(".todo_list .completed")
+    liArray.forEach(function(item){
+        Delete(item.firstChild.firstChild)
+    })
+}
+function Delete(element){
+    let ptnode = element.parentElement.parentElement
+    model = update(model, "DELETE", Number(ptnode.id))
+    ptnode.parentElement.removeChild(ptnode)
+
+    if(footerRenderTime != 0 && model.todos.length === 0){
+        toDoApp.removeChild(document.querySelector("#todo_app .footer"))
+        footerRenderTime = 0
+    }
+}
+function pageLocateHandle(index){
+    switch(index){
+        case 0:
+            location.href = 'http://127.0.0.1:3000/fvv/html/fvv_page_memo.html'
+            break
+        case 1:
+            location.href = 'http://127.0.0.1:3000/fvv/html/fvv_page_remind.html'
+            break
+        case 2:
+            location.href = 'http://127.0.0.1:3000/fvv/html/fvv_page_setting.html'
+            break
+        default:
+            return 0
+    }
+}
+
+let footerRenderTime = 0
 const toDoApp = document.querySelector("#todo_app")
 const toDoList = document.querySelector(".todo_list")
 const headerInput = document.querySelector(".header_input_span input")
 headerInput.addEventListener("keydown", add)
+
+const button_array = document.querySelectorAll(".page_bu")
+button_array.forEach(function(item, index){
+    item.addEventListener("click", function(){
+        pageLocateHandle(index)
+    })
+})

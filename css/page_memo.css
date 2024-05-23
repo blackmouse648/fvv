@@ -157,10 +157,12 @@ input::placeholder {
     }
 }
 .footer{
+    position: relative;
     background-color: #fffefe;
     height: 9.3%;
     width: 100%;
     display: flex;
+    border-top: 1px #74727297 solid;
     flex-direction: row;
     align-items: center;
     border-radius: 0 0 5px 5px;
@@ -168,9 +170,10 @@ input::placeholder {
 .footer::before{
     position: absolute;
     content: "";
-    width: 89%;
+    width: 100%;
     margin-top: 5px;
     height: 60px;
+    z-index: 0;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 .todo-count{
@@ -182,6 +185,10 @@ input::placeholder {
     & strong{
         margin-right: 5px;
     }
+}
+.filters > *{
+    position: relative;
+    z-index: 2;
 }
 .filters{
     list-style: none;
@@ -205,6 +212,8 @@ input::placeholder {
     border-radius: 5px;
 }
 .clear-completed{
+    position: relative;
+    z-index: 2;
     display: flex;
     align-self: flex-start;
     font-size: 1rem;
