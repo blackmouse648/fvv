@@ -3,7 +3,7 @@ const toastiFy = document.querySelector(".toastiFy");
         const tableSubmit = document.querySelectorAll(".table_ground input");
         const loginButton = document.querySelectorAll(".table_ground button");
 
-        tableSubmit[0].focus();
+        // tableSubmit[0].focus();
 
         function checkLoginFromClick(){
             if(tableSubmit[0].value === ""){

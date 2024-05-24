@@ -1,7 +1,13 @@
 const button_array = document.querySelectorAll(".page_bu")
+const checkBoxArray = document.querySelectorAll("input")
 button_array.forEach(function(item, index){
     item.addEventListener("click", function(){
         pageLocateHandle(index)
+    })
+})
+checkBoxArray.forEach(function(item){
+    item.addEventListener("change", function(){
+        transColor(this.parentElement)
     })
 })
 function pageLocateHandle(index){
@@ -18,4 +24,9 @@ function pageLocateHandle(index){
         default:
             return 0
     }
+}
+function transColor(element){
+    element.style.backgroundColor === "rgba(255, 255, 255, 0.525)"?
+    element.style.backgroundColor = '#fbfbfb42':
+    element.style.backgroundColor = "rgba(255, 255, 255, 0.525)"
 }

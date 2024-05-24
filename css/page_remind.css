@@ -7,6 +7,9 @@
     font-family: 'Poppins',sans-serif;
     font-size: 14px;
 }
+h3{
+    transition: color 1s ease;
+}
 #fvvmain_page {
     height: 100vh;
     width: 100%;
@@ -84,6 +87,7 @@
     justify-content:center;
     flex-wrap: wrap;
     appearance: none;
+    transition: background-color 1s linear;
     & input{
         z-index: 2;
         position: absolute;
@@ -97,9 +101,6 @@
         ~ h3{
             color:#444244;
         }
-        /* ~ h2{
-            color:#2e2d2e54;
-        } */
     }
 }
 .remind_content_0{
@@ -147,7 +148,7 @@
         top: -10%;
         right: 1rem;
         font-size: 8rem;
-        color: rgba(187, 187, 187, 0.121);
+        color: rgba(138, 135, 135, 0.219);
     }
     & h3{
         display: flex;
@@ -295,9 +296,6 @@
 .container .card .content{
     padding: 20px;
     text-align: center;
-    /* transform: translateY(100px); */
-    /* opacity: 0; */
-    /* transition: 0.5s; */
 }
 /* .container .card:hover .content{
     transform: translateY(0px);
