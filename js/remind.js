@@ -13,13 +13,13 @@ checkBoxArray.forEach(function(item){
 function pageLocateHandle(index){
     switch(index){
         case 0:
-            location.href = 'http://127.0.0.1:3000/fvv/html/fvv_page_memo.html'
+            location.href = './fvv_page_memo.html'
             break
         case 1:
-            location.href = 'http://127.0.0.1:3000/fvv/html/fvv_page_remind.html'
+            location.href = './fvv_page_remind.html'
             break
         case 2:
-            location.href = 'http://127.0.0.1:3000/fvv/html/fvv_page_setting.html'
+            location.href = './fvv_page_setting.html'
             break
         default:
             return 0
